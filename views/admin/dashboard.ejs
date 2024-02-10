@@ -1,0 +1,126 @@
+<head>
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+
+    .container-fluid {
+      padding: 0;
+    }
+
+    .sidebar {
+      background-color: #343a40;
+      color: #fff;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 250px;
+      overflow-y: auto;
+    }
+
+    .sidebar-brand {
+      padding: 15px;
+      text-align: center;
+    }
+
+    .sidebar-nav {
+      list-style-type: none;
+      padding: 0;
+      margin: 20px 0;
+    }
+
+    .sidebar-nav a {
+      display: block;
+      padding: 10px;
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .sidebar-nav a i {
+      margin-right: 10px;
+    }
+
+    .logout-button {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      width: 100%;
+      text-align: left;
+      padding: 10px;
+    }
+
+    @media (max-width: 991px) {
+      .sidebar {
+        width: 100%;
+        position: static;
+      }
+    }
+
+    /* Additional styles for the Block button */
+    .block-button {
+      background-color: #d9534f;
+      color: #fff;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<div class="container-fluid">
+  <div class="row">
+    <!-- Sidebar -->
+    <nav class="col-md-2 d-none d-md-block sidebar">
+      <div class="sidebar-brand">Admin Dashboard</div>
+      <ul class="sidebar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="/admin/customer">
+            <i class="fas fa-users"></i> Customers
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/admin/view-product">
+            <i class="fas fa-box"></i> Products
+          </a>
+        </li>
+      </ul>
+      <div class="logout-button">
+        <a href="/admin/logout" class="nav-link">
+          <i class="fas fa-sign-out-alt"></i> Logout
+        </a>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <!-- <main class="col-md-10 ms-sm-auto main-content">
+      <h2>Customer Details</h2>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Phone</th>
+            <th scope="col">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>John Doe</td>
+            <td>john@example.com</td>
+            <td>123-456-7890</td>
+            <td>
+              <button class="block-button">
+                <i class="fas fa-ban"></i> Block
+              </button>
+            </td>
+          </tr>
+    
+        </tbody>
+      </table>
+    </main> -->
+  </div>
+</div>

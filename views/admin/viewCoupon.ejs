@@ -1,0 +1,33 @@
+<div class="container">
+  <h1 class="text-center mb-4">View Coupons</h1>
+  <div class="mb-3">
+    <a href="/admin/add-coupon" class="btn btn-info">Add Coupon</a>
+  </div>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">SL NO</th>
+        <th scope="col">Coupon Name</th>
+        <th scope="col">Discount</th>
+        <th scope="col">Min Value</th>
+        <th scope="col">Max Value</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% coupons.forEach((coupon, index) => { %>
+      <tr>
+        <th scope="row"><%= index + 1 %></th>
+        <td><%= coupon.name %></td>
+        <td><%= coupon.discount %>%</td>
+        <td><%= coupon.minimumvalue %></td>
+        <td><%= coupon.maximumvalue %></td>
+        <td>
+          <button class="btn btn-danger btn-delete">Delete</button>
+          <button class="btn btn-primary btn-edit">Edit</button>
+        </td>
+      </tr>
+      <% }) %>
+    </tbody>
+  </table>
+</div>
